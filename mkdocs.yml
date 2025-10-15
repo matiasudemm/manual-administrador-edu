@@ -1,0 +1,26 @@
+site_name: Manual de Administrador – Edu 2.0
+theme:
+  name: material
+  language: es
+  features:
+    - navigation.sections
+    - content.code.copy
+nav:
+  - Introducción: index.md
+  - Arquitectura: arquitectura.md
+  - Requerimientos: requerimientos.md
+  - Instalación:
+      - Backend: instalacion-backend.md
+      - Frontend: instalacion-frontend.md
+  - Bases de datos:
+      - Configuración: base-datos.md
+      - MongoDB en Docker: mongodb-docker.md
+  - Servidor LLM: servidor-llm.md
+  - Automatización: automatizacion.md
+  - Administración: administracion.md
+  - Seguridad: seguridad.md
+  - Copias de seguridad: backups.md
+  - Migración: migracion.md
+  - FAQ: faq.md
+
+dev_addr: 127.0.0.1:8001
