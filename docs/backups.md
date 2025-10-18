@@ -1,11 +1,14 @@
 # Copias de seguridad y restauración
 
-## Archivos críticos
-- `.env`, scripts `*.ps1`, `Dockerfile*`, carpetas `contextos/`.
+## Backend/Configuración: 
+- Respaldar `.env`, scripts `*.ps1`, `Dockerfile*`, y carpetas `contextos/`.
 
 ## Bases de datos
-- MySQL: `mysqldump` diario.
-- MongoDB: backup en frío de `historial/`.
+- MySQL: `mysqldump` diario y retención 14–30 días.
+- MongoDB: backup en frío de `historial/`(o `mongodump` si se expone).
 
-## Pruebas
-Validar backups mensualmente en entorno de staging.
+## Frontend:
+- Respaldar `src/` y artefactos de build si aplica.
+
+## Pruebas de restauración:
+- Validar backups mensuales en entorno de staging.

@@ -1,8 +1,8 @@
 # Migración de servidor
 
-1. Copiar repositorio y archivos de configuración.
-2. Instalar prerequisitos.
-3. Restaurar MySQL.
-4. Copiar carpeta `historial/`.
-5. Desplegar LLM y validar.
-6. Levantar backend/frontend y testear.
+1. Copiar repositorio y archivos de configuración (`.env`, scripts, etc.).
+2. Instalar prerequisitos (Python/Node/Docker/CUDA).
+3. Restaurar MySQL desde dump.
+4. Copiar carpeta `historial/` de Mongo al nuevo host y recrear contenedor con `-v <nuevo_path>:/data/db`.
+5. Desplegar LLM y validar conectividad desde backend.
+6. Levantar backend/frontend y ejecutar pruebas funcionales.

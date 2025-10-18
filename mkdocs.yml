@@ -10,6 +10,7 @@ nav:
   - Arquitectura: arquitectura.md
   - Requerimientos: requerimientos.md
   - Instalación:
+      - Preparación del entorno: preparación-entorno.md
       - Backend: instalacion-backend.md
       - Frontend: instalacion-frontend.md
   - Bases de datos:

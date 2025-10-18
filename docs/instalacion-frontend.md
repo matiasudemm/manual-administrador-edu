@@ -10,3 +10,5 @@
 npm run build
 ```
 Desplegar `dist/` detrás de un servidor (IIS, Nginx, etc.).
+
+Configurar `VITE_API_BASE` en `.env` para apuntar al backend.

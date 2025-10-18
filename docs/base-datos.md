@@ -2,12 +2,12 @@
 
 ## MySQL
 - Crear base de datos `edu`.
-- Importar esquema inicial.
+- Importar esquema inicial desde scripts SQL proporcionados.
 - Configurar credenciales en el backend.
 
 ## MongoDB
 - Se crea automáticamente al iniciar el sistema.
-- Credenciales definidas en el backend.
+- Las credenciales se encuentran en el backend.
 
 ### Backups
 ```bash
