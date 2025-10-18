@@ -669,11 +669,16 @@
 
 
 <h1 id="mongodb-en-docker">MongoDB en Docker</h1>
-<p>Imagen y contenedor:
-Desde carpeta mongodb/ del repositorio</p>
+<ul>
+<li>Imagen y contenedor:</li>
+<li>Desde carpeta mongodb/ del repositorio</li>
+</ul>
 <pre><code class="language-bash">docker build -t tutor_mongo .
-primera ejecución (modo daemon, puerto 27017 y volumen linkeado)
-docker run -d --name tutor_mongo -p 27017:27017 -v ${PWD}/historial:/data/db tutor_mongo
+</code></pre>
+<ul>
+<li>Primera ejecución (modo daemon, puerto 27017 y volumen linkeado)</li>
+</ul>
+<pre><code class="language-bash">docker run -d --name tutor_mongo -p 27017:27017 -v ${PWD}/historial:/data/db tutor_mongo
 </code></pre>
 <h1 id="reinicios-posteriores">reinicios posteriores</h1>
 <pre><code class="language-bash">docker start tutor_mongo

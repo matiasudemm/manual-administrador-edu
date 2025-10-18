@@ -9,11 +9,10 @@ docker build -t tutor_mongo .
 ```bash
 docker run -d --name tutor_mongo -p 27017:27017 -v ${PWD}/historial:/data/db tutor_mongo
 ```
-# reinicios posteriores
+- Reinicios posteriores
 ```bash
 docker start tutor_mongo
 ```
-
 - Carpeta `historial/` 
 Contiene los archivos de la base de datos (repositorio físico de MongoDB).
 - Migración

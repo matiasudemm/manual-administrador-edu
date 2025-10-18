@@ -8,7 +8,7 @@
 - **Servidor LLM**: llama.cpp (GPU).
 
 ## Puertos típicos
-- Frontend dev: 5173 / Producción: 80/443
-- Backend: 8000 o 80/443 tras proxy
-- MongoDB: 27017/tcp
-- LLM: 8080/tcp
+- **Frontend** dev: 5173 / Producción: 80/443
+- **Backend:** 8000 o 80/443 tras proxy
+- **MongoDB:** 27017/tcp
+- **LLM:** 8080/tcp
