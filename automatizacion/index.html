@@ -303,6 +303,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../preparaci%C3%B3n-entorno/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Preparación del entorno
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../instalacion-backend/" class="md-nav__link">
         
   
@@ -483,6 +506,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Automatización
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -494,6 +530,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recomendaciones-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recomendaciones de uso:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consideraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consideraciones:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -629,6 +702,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recomendaciones-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recomendaciones de uso:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consideraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consideraciones:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -644,13 +743,23 @@
 
 
 <h1 id="automatizacion-con-powershell-iniciarps1">Automatización con PowerShell (iniciar.ps1)</h1>
-<p>Objetivo: orquestar el arranque local (MongoDB, LLM, backend, frontend).</p>
-<pre><code class="language-powershell">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-.\iniciar.ps1
+<p>Objetivo: Orquestar el arranque local: levantar Mongo en Docker (si no está corriendo), el servidor LLM y los procesos de backend/frontend.</p>
+<h2 id="recomendaciones-de-uso">Recomendaciones de uso:</h2>
+<ul>
+<li>Ubicar <code>iniciar.ps1</code> en la raíz del proyecto.</li>
+<li>Abrir PowerShell en esa carpeta y ejecutar:</li>
+</ul>
+<pre><code class="language-powershell">.\iniciar.ps1
 </code></pre>
 <ul>
-<li>Valida prerequisitos (Docker, Python, Node).</li>
-<li>Logs y manejo de errores incluidos.</li>
+<li>Si se definió un alias <code>iniciar</code>, también puede invocarse escribiendo:
+iniciar</li>
+</ul>
+<h2 id="consideraciones">Consideraciones:</h2>
+<ul>
+<li>Asegurar <code>Set-ExecutionPolicy RemoteSigned</code> (scope CurrentUser).</li>
+<li>El script debería validar prerequisitos (Docker, Python, Node), crear/activar venv, ejecutar <code>pip install -r requirements.txt</code>, <code>npm ci</code>, y levantar servicios en el orden correcto.</li>
+<li>Incluir logs y manejo de errores (si un servicio falla, mostrar mensaje claro y no cerrar la consola automáticamente).</li>
 </ul>
 
 

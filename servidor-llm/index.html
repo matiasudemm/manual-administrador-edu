@@ -303,6 +303,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../preparaci%C3%B3n-entorno/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Preparación del entorno
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../instalacion-backend/" class="md-nav__link">
         
   
@@ -511,9 +534,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejecucion" class="md-nav__link">
+  <a href="#ejecucion-inicial-puerto-8080-con-gpu" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejecución
+      Ejecución inicial (puerto 8080, con GPU)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas:
     </span>
   </a>
   
@@ -695,9 +727,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejecucion" class="md-nav__link">
+  <a href="#ejecucion-inicial-puerto-8080-con-gpu" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejecución
+      Ejecución inicial (puerto 8080, con GPU)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notas:
     </span>
   </a>
   
@@ -723,10 +764,13 @@
 <h2 id="construccion">Construcción</h2>
 <pre><code class="language-bash">docker build --no-cache -f Dockerfile.dev -t llama-server .
 </code></pre>
-<h2 id="ejecucion">Ejecución</h2>
+<h2 id="ejecucion-inicial-puerto-8080-con-gpu">Ejecución inicial (puerto 8080, con GPU)</h2>
 <pre><code class="language-bash">docker run --gpus all -p 8080:8080 --name llama-server llama-server
 </code></pre>
-<p>Verificar <code>LLM_SERVER_URL</code> en backend apunte a <code>http://localhost:8080/completion</code>.</p>
+<h2 id="notas">Notas:</h2>
+<p>Montar carpeta de modelos GGUF si el contenedor los espera en host (ej.: <code>-v C:\Modelos:/models</code>).
+Verificar <code>LLM_SERVER_URL</code> en backend apunte a <code>http://localhost:8080/completion</code>.
+Consultar logs: <code>docker logs -f llama-server</code>.</p>
 
 
 

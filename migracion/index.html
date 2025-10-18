@@ -303,6 +303,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../preparaci%C3%B3n-entorno/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Preparación del entorno
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../instalacion-backend/" class="md-nav__link">
         
   
@@ -645,12 +668,12 @@
 
 <h1 id="migracion-de-servidor">Migración de servidor</h1>
 <ol>
-<li>Copiar repositorio y archivos de configuración.</li>
-<li>Instalar prerequisitos.</li>
-<li>Restaurar MySQL.</li>
-<li>Copiar carpeta <code>historial/</code>.</li>
-<li>Desplegar LLM y validar.</li>
-<li>Levantar backend/frontend y testear.</li>
+<li>Copiar repositorio y archivos de configuración (<code>.env</code>, scripts, etc.).</li>
+<li>Instalar prerequisitos (Python/Node/Docker/CUDA).</li>
+<li>Restaurar MySQL desde dump.</li>
+<li>Copiar carpeta <code>historial/</code> de Mongo al nuevo host y recrear contenedor con <code>-v &lt;nuevo_path&gt;:/data/db</code>.</li>
+<li>Desplegar LLM y validar conectividad desde backend.</li>
+<li>Levantar backend/frontend y ejecutar pruebas funcionales.</li>
 </ol>
 
 
