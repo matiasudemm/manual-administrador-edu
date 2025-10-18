@@ -666,18 +666,18 @@
 
 <h1 id="solucion-de-problemas-faq">Solución de problemas (FAQ)</h1>
 <ul>
-<li><strong><code>pip</code> compila paquetes:</strong> </li>
-<li>Instalar Build Tools (Windows) o <code>build-essential</code> (Linux). Verificar Python 3.10.x.</li>
-<li><strong><code>torch</code> no detecta GPU:</strong></li>
-<li>Confirmar drivers NVIDIA y CUDA 11.8; probar <code>nvidia-smi</code>. Verificar que la imagen de llama.cpp tenga soporte CUDA.</li>
-<li><strong><code>npm install</code> falla:</strong></li>
-<li>Use <code>npm ci</code> para respetar <code>package-lock.json</code>. Verificar Node 18.x.</li>
-<li><strong>Puerto en uso:</strong></li>
-<li>Cambiar <code>--port</code> o detener proceso conflictivo.</li>
-<li><strong>Backend no llega al LLM:</strong></li>
-<li>Revisar <code>LLM_SERVER_URL</code> y que el contenedor exponga 8080; <code>docker logs llama-server</code>.</li>
-<li><strong>Mongo sin datos:</strong></li>
-<li>Revisar mapeo del volumen (ruta absoluta, permisos) y existencia de <code>historial/</code>.</li>
+<li><strong><code>pip</code> compila paquetes:</strong><br />
+Instalar Build Tools (Windows) o <code>build-essential</code> (Linux). Verificar Python 3.10.x.</li>
+<li><strong><code>torch</code> no detecta GPU:</strong><br />
+Confirmar drivers NVIDIA y CUDA 11.8; probar <code>nvidia-smi</code>. Verificar que la imagen de llama.cpp tenga soporte CUDA.</li>
+<li><strong><code>npm install</code> falla:</strong><br />
+Use <code>npm ci</code> para respetar <code>package-lock.json</code>. Verificar Node 18.x.</li>
+<li><strong>Puerto en uso:</strong><br />
+Cambiar <code>--port</code> o detener proceso conflictivo.</li>
+<li><strong>Backend no llega al LLM:</strong><br />
+Revisar <code>LLM_SERVER_URL</code> y que el contenedor exponga 8080; <code>docker logs llama-server</code>.</li>
+<li><strong>Mongo sin datos:</strong><br />
+Revisar mapeo del volumen (ruta absoluta, permisos) y existencia de <code>historial/</code>.</li>
 </ul>
 
 

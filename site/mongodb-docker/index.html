@@ -456,6 +456,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    MongoDB en Docker
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -467,6 +480,79 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#imagen-y-contenedor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imagen y contenedor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primera-ejecucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primera ejecución
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reinicios-posteriores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reinicios posteriores
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#carpeta-historial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Carpeta historial/
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migración
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backups-en-frio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backups en frío
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -654,6 +740,68 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#imagen-y-contenedor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Imagen y contenedor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primera-ejecucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primera ejecución
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reinicios-posteriores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reinicios posteriores
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#carpeta-historial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Carpeta historial/
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migración
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backups-en-frio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backups en frío
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -669,36 +817,29 @@
 
 
 <h1 id="mongodb-en-docker">MongoDB en Docker</h1>
-<ul>
-<li>Imagen y contenedor:</li>
-<li>Desde carpeta mongodb/ del repositorio</li>
-</ul>
+<h2 id="imagen-y-contenedor">Imagen y contenedor</h2>
+<p>Desde carpeta mongodb/ del repositorio</p>
 <pre><code class="language-bash">docker build -t tutor_mongo .
 </code></pre>
-<ul>
-<li>Primera ejecución (modo daemon, puerto 27017 y volumen linkeado)</li>
-</ul>
+<h2 id="primera-ejecucion">Primera ejecución</h2>
+<p>Mmodo daemon, puerto 27017 y volumen linkeado</p>
 <pre><code class="language-bash">docker run -d --name tutor_mongo -p 27017:27017 -v ${PWD}/historial:/data/db tutor_mongo
 </code></pre>
-<ul>
-<li>Reinicios posteriores</li>
-</ul>
+<h2 id="reinicios-posteriores">Reinicios posteriores</h2>
 <pre><code class="language-bash">docker start tutor_mongo
 </code></pre>
-<ul>
-<li>Carpeta <code>historial/</code> 
-Contiene los archivos de la base de datos (repositorio físico de MongoDB).</li>
-<li>Migración
-Copiar esta carpeta al nuevo servidor y recrear el contenedor apuntando al nuevo path.</li>
-<li>Backups en frío:
-Detener</li>
-</ul>
+<h2 id="carpeta-historial">Carpeta <code>historial/</code></h2>
+<p>Contiene los archivos de la base de datos (repositorio físico de MongoDB).</p>
+<h2 id="migracion">Migración</h2>
+<p>Copiar esta carpeta al nuevo servidor y recrear el contenedor apuntando al nuevo path.</p>
+<h2 id="backups-en-frio">Backups en frío</h2>
+<p>Detener</p>
 <pre><code class="language-bash">docker stop tutor_mongo
 </code></pre>
 <p>Backup</p>
 <pre><code class="language-bash">Compress-Archive -Path .\historial -DestinationPath .\mongo_historial_YYYYMMDD.zip
 </code></pre>
-<p>Restaurar
+<p>Restaurar<br />
 Descomprimir y ejecutar </p>
 <pre><code class="language-bash">docker run con -v &lt;path&gt;:/data/db
 </code></pre>

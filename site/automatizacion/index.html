@@ -547,9 +547,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recomendaciones-de-uso" class="md-nav__link">
     <span class="md-ellipsis">
-      Recomendaciones de uso:
+      Recomendaciones de uso
     </span>
   </a>
   
@@ -558,7 +567,7 @@
         <li class="md-nav__item">
   <a href="#consideraciones" class="md-nav__link">
     <span class="md-ellipsis">
-      Consideraciones:
+      Consideraciones
     </span>
   </a>
   
@@ -709,9 +718,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recomendaciones-de-uso" class="md-nav__link">
     <span class="md-ellipsis">
-      Recomendaciones de uso:
+      Recomendaciones de uso
     </span>
   </a>
   
@@ -720,7 +738,7 @@
         <li class="md-nav__item">
   <a href="#consideraciones" class="md-nav__link">
     <span class="md-ellipsis">
-      Consideraciones:
+      Consideraciones
     </span>
   </a>
   
@@ -743,19 +761,20 @@
 
 
 <h1 id="automatizacion-con-powershell-iniciarps1">Automatización con PowerShell (iniciar.ps1)</h1>
-<p>Objetivo: Orquestar el arranque local: levantar Mongo en Docker (si no está corriendo), el servidor LLM y los procesos de backend/frontend.</p>
-<h2 id="recomendaciones-de-uso">Recomendaciones de uso:</h2>
+<h2 id="objetivo">Objetivo</h2>
+<p>Orquestar el arranque local, es decir levantar Mongo en Docker (si no está corriendo), el servidor LLM y los procesos de backend/frontend.</p>
+<h2 id="recomendaciones-de-uso">Recomendaciones de uso</h2>
 <ul>
 <li>Ubicar <code>iniciar.ps1</code> en la raíz del proyecto.</li>
 <li>Abrir PowerShell en esa carpeta y ejecutar:</li>
 </ul>
-<pre><code class="language-powershell">.\iniciar.ps1
+<pre><code class="language-bash">.\iniciar.ps1
 </code></pre>
 <ul>
 <li>Si se definió un alias <code>iniciar</code>, también puede invocarse escribiendo:
 iniciar</li>
 </ul>
-<h2 id="consideraciones">Consideraciones:</h2>
+<h2 id="consideraciones">Consideraciones</h2>
 <ul>
 <li>Asegurar <code>Set-ExecutionPolicy RemoteSigned</code> (scope CurrentUser).</li>
 <li>El script debería validar prerequisitos (Docker, Python, Node), crear/activar venv, ejecutar <code>pip install -r requirements.txt</code>, <code>npm ci</code>, y levantar servicios en el orden correcto.</li>
