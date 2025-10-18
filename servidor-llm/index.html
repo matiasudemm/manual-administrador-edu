@@ -768,9 +768,17 @@
 <pre><code class="language-bash">docker run --gpus all -p 8080:8080 --name llama-server llama-server
 </code></pre>
 <h2 id="notas">Notas:</h2>
-<p>Montar carpeta de modelos GGUF si el contenedor los espera en host (ej.: <code>-v C:\Modelos:/models</code>).
-Verificar <code>LLM_SERVER_URL</code> en backend apunte a <code>http://localhost:8080/completion</code>.
-Consultar logs: <code>docker logs -f llama-server</code>.</p>
+<ul>
+<li>Montar carpeta de modelos GGUF si el contenedor los espera en host (ej.: <code>-v C:\Modelos:/models</code>).</li>
+<li>Verificar <code>LLM_SERVER_URL</code> en backend apunte a </li>
+</ul>
+<pre><code class="language-bash">http://localhost:8080/completion
+</code></pre>
+<ul>
+<li>Consultar logs:</li>
+</ul>
+<pre><code class="language-bash">docker logs -f llama-server 
+</code></pre>
 
 
 
