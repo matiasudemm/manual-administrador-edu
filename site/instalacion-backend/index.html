@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../requerimientos/">
+        <link rel="prev" href="../preparaci%C3%B3n-entorno/">
       
       
         <link rel="next" href="../instalacion-frontend/">
@@ -297,6 +297,29 @@
             Instalación
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../preparaci%C3%B3n-entorno/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Preparación del entorno
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -708,13 +731,13 @@
 <li>Clonar el repositorio del proyecto.</li>
 <li>Crear y activar entorno virtual de Python.</li>
 <li>Instalar dependencias con <code>pip install -r requirements.txt</code>.</li>
-<li>Configurar variables de entorno (.env).</li>
+<li>Configurar variables de entorno (.env) con parámetros de MySQL, MongoDB y servidor LLM.</li>
 <li>Ejecutar <code>uvicorn app.main:app --reload</code>.</li>
 </ol>
 <h2 id="produccion">Producción</h2>
 <ul>
-<li>Usar Gunicorn/Uvicorn detrás de proxy (IIS/ARR o Nginx).</li>
-<li>Logs, healthchecks y monitoreo activos.</li>
+<li>Servir con Gunicorn/Uvicorn workers detrás de un proxy (IIS/ARR o Nginx) con HTTPS.</li>
+<li>Registrar logs (rotación diaria), healthchecks y monitoreo.</li>
 </ul>
 
 

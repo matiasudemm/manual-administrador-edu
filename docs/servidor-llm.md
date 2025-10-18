@@ -10,6 +10,12 @@ docker build --no-cache -f Dockerfile.dev -t llama-server .
 docker run --gpus all -p 8080:8080 --name llama-server llama-server
 ```
 ## Notas:
-Montar carpeta de modelos GGUF si el contenedor los espera en host (ej.: `-v C:\Modelos:/models`).
-Verificar `LLM_SERVER_URL` en backend apunte a `http://localhost:8080/completion`.
-Consultar logs: `docker logs -f llama-server`.
+- Montar carpeta de modelos GGUF si el contenedor los espera en host (ej.: `-v C:\Modelos:/models`).
+- Verificar `LLM_SERVER_URL` en backend apunte a 
+```bash
+http://localhost:8080/completion
+```
+- Consultar logs:
+```bash 
+docker logs -f llama-server 
+```

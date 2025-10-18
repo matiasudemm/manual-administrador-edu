@@ -1,10 +1,12 @@
 # MongoDB en Docker
-Imagen y contenedor:
-Desde carpeta mongodb/ del repositorio
+- Imagen y contenedor:
+- Desde carpeta mongodb/ del repositorio
 
 ```bash
 docker build -t tutor_mongo .
-primera ejecución (modo daemon, puerto 27017 y volumen linkeado)
+```
+- Primera ejecución (modo daemon, puerto 27017 y volumen linkeado)
+```bash
 docker run -d --name tutor_mongo -p 27017:27017 -v ${PWD}/historial:/data/db tutor_mongo
 ```
 # reinicios posteriores

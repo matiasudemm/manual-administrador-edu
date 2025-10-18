@@ -303,6 +303,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../preparaci%C3%B3n-entorno/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Preparación del entorno
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../instalacion-backend/" class="md-nav__link">
         
   
@@ -645,11 +668,13 @@
 
 <h1 id="seguridad-y-buenas-practicas">Seguridad y Buenas Prácticas</h1>
 <ul>
-<li>HTTPS obligatorio en producción.</li>
-<li>Variables sensibles solo en <code>.env</code>.</li>
-<li>Rotar claves JWT y contraseñas DB.</li>
-<li>Limitar orígenes CORS.</li>
-<li>Actualizar dependencias y contenedores.</li>
+<li>HTTPS obligatorio en producción (certificados válidos).</li>
+<li>Variables sensibles sólo en <code>.env</code>/secret store. Nunca commitear secretos.</li>
+<li>Rotación de claves JWT y contraseñas de DB.</li>
+<li>Firewalls: exponer sólo puertos necesarios.</li>
+<li>Limitar orígenes CORS al dominio oficial.</li>
+<li>Actualizar periódicamente dependencias y contenedores.</li>
+<li>Monitoreo y alertas (CPU, RAM, errores 5xx, colas de trabajo, etc.).</li>
 </ul>
 
 

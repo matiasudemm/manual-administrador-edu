@@ -303,6 +303,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../preparaci%C3%B3n-entorno/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Preparación del entorno
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../instalacion-backend/" class="md-nav__link">
         
   
@@ -646,15 +669,31 @@
 
 
 <h1 id="mongodb-en-docker">MongoDB en Docker</h1>
+<p>Imagen y contenedor:
+Desde carpeta mongodb/ del repositorio</p>
 <pre><code class="language-bash">docker build -t tutor_mongo .
+primera ejecución (modo daemon, puerto 27017 y volumen linkeado)
 docker run -d --name tutor_mongo -p 27017:27017 -v ${PWD}/historial:/data/db tutor_mongo
 </code></pre>
+<h1 id="reinicios-posteriores">reinicios posteriores</h1>
+<pre><code class="language-bash">docker start tutor_mongo
+</code></pre>
 <ul>
-<li>Carpeta <code>historial/</code> contiene los datos.</li>
-<li>Para backup:</li>
+<li>Carpeta <code>historial/</code> 
+Contiene los archivos de la base de datos (repositorio físico de MongoDB).</li>
+<li>Migración
+Copiar esta carpeta al nuevo servidor y recrear el contenedor apuntando al nuevo path.</li>
+<li>Backups en frío:
+Detener</li>
 </ul>
 <pre><code class="language-bash">docker stop tutor_mongo
-Compress-Archive -Path .\historial -DestinationPath .\mongo_historial_YYYYMMDD.zip
+</code></pre>
+<p>Backup</p>
+<pre><code class="language-bash">Compress-Archive -Path .\historial -DestinationPath .\mongo_historial_YYYYMMDD.zip
+</code></pre>
+<p>Restaurar
+Descomprimir y ejecutar </p>
+<pre><code class="language-bash">docker run con -v &lt;path&gt;:/data/db
 </code></pre>
 
 

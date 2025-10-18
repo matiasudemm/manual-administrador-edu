@@ -301,6 +301,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../preparaci%C3%B3n-entorno/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Preparación del entorno
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../instalacion-backend/" class="md-nav__link">
         
   
@@ -643,12 +666,18 @@
 
 <h1 id="solucion-de-problemas-faq">Solución de problemas (FAQ)</h1>
 <ul>
-<li><strong>pip compila paquetes</strong>: instalar Build Tools o <code>build-essential</code>.</li>
-<li><strong>torch sin GPU</strong>: verificar drivers y CUDA 11.8.</li>
-<li><strong>npm install falla</strong>: usar <code>npm ci</code>.</li>
-<li><strong>Puerto en uso</strong>: cambiar o liberar.</li>
-<li><strong>Backend no conecta al LLM</strong>: revisar <code>LLM_SERVER_URL</code>.</li>
-<li><strong>Mongo vacío</strong>: verificar volumen y permisos.</li>
+<li><strong><code>pip</code> compila paquetes:</strong> 
+    Instalar Build Tools (Windows) o <code>build-essential</code> (Linux). Verificar Python 3.10.x.</li>
+<li><strong><code>torch</code> no detecta GPU:</strong>
+    Confirmar drivers NVIDIA y CUDA 11.8; probar <code>nvidia-smi</code>. Verificar que la imagen de llama.cpp tenga soporte CUDA.</li>
+<li><strong><code>npm install</code> falla:</strong>
+    Use <code>npm ci</code> para respetar <code>package-lock.json</code>. Verificar Node 18.x.</li>
+<li><strong>Puerto en uso:</strong>
+    Cambiar <code>--port</code> o detener proceso conflictivo.</li>
+<li><strong>Backend no llega al LLM:</strong>
+    Revisar <code>LLM_SERVER_URL</code> y que el contenedor exponga 8080; <code>docker logs llama-server</code>.</li>
+<li><strong>Mongo sin datos:</strong>
+    Revisar mapeo del volumen (ruta absoluta, permisos) y existencia de <code>historial/</code>.</li>
 </ul>
 
 
