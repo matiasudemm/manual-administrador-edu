@@ -24,9 +24,6 @@ theme:
     - navigation.sections
     - content.code.copy
 
-extra_css:
-  - overrides.css
-
 extra_javascript:
   - js/logo-theme-switcher.js
 
