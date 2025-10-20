@@ -3,7 +3,7 @@ function updateLogo() {
   const darkMode = document.documentElement.getAttribute('data-md-color-scheme') === 'slate';
 
   if (logo) {
-    logo.src = darkMode ? 'img/EDU-Oscuro.png' : 'img/EDU.png';
+    logo.src = darkMode ? 'doc/img/EDU-Oscuro.png' : 'doc/img/EDU.png';
   }
 }
 
