@@ -27,6 +27,9 @@ theme:
 extra_css:
   - overrides.css
 
+extra_javascript:
+  - js/logo-theme-switcher.js
+
 
 nav:
   - Introducción: index.md

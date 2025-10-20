@@ -1,0 +1,9 @@
+/* Imagen por defecto (modo claro) */
+#edu-logo {
+  content: url('/img/EDU.png');
+}
+
+/* Imagen en modo oscuro */
+[data-md-color-scheme="slate"] #edu-logo {
+  content: url('/img/EDU-Oscuro.png');
+}
