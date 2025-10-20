@@ -5,8 +5,10 @@ Este manual está destinado al personal de soporte y administradores encargados 
 Incluye requisitos técnicos, procedimientos de instalación y pautas de administración.
 
 <p align="center">
-  <img id="edu-logo" src="img/EDU.png" alt="Logo Edu 2.0" width="50%">
+  <img id="edu-logo"
+       src="img/EDU.png"
+       data-light="img/EDU.png"
+       data-dark="img/EDU-Oscuro.png"
+       alt="Logo Edu 2.0"
+       width="50%">
 </p>
-
-
-
