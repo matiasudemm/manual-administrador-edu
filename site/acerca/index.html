@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../preparaci%C3%B3n-entorno/">
+        <link rel="prev" href="../faq/">
       
-      
-        <link rel="next" href="../instalacion-frontend/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Backend - Manual de Administrador – Edu 2.0</title>
+        <title>Acerca de Smartech - Manual de Administrador – Edu 2.0</title>
       
     
     
@@ -72,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#instalacion-del-backend" class="md-skip">
+        <a href="#nuestro-equipo" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -108,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Backend
+              Acerca de Smartech
             
           </span>
         </div>
@@ -293,8 +291,6 @@
       
   
   
-    
-  
   
   
     
@@ -307,11 +303,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -327,7 +323,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Instalación
@@ -361,32 +357,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Backend
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../instalacion-backend/" class="md-nav__link">
         
   
   
@@ -397,35 +371,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#produccion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Producción
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -715,10 +660,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../acerca/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -729,6 +683,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -753,23 +708,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#produccion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Producción
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -784,18 +722,28 @@
 
 
 
-<h1 id="instalacion-del-backend">Instalación del Backend</h1>
-<ol>
-<li>Clonar el repositorio del proyecto.</li>
-<li>Crear y activar entorno virtual de Python.</li>
-<li>Instalar dependencias con <code>pip install -r requirements.txt</code>.</li>
-<li>Configurar variables de entorno (.env) con parámetros de MySQL, MongoDB y servidor LLM.</li>
-<li>Ejecutar <code>uvicorn app.main:app --reload</code>.</li>
-</ol>
-<h2 id="produccion">Producción</h2>
+<p><img alt="Smart-1" src="../img/logosmart.png" style="display:block; margin:auto; width:30%;" />
+Smartech está formado por un equipo de estudiantes del último año de Ingeniería en Sistemas comprometidos con la innovación tecnológica aplicada a la educación.<br />
+Nuestro objetivo es desarrollar soluciones inteligentes que faciliten el aprendizaje y optimicen las tareas docentes mediante el uso de inteligencia artificial y herramientas digitales.<br />
+El proyecto Edu 2.0 refleja nuestra visión de una educación universitaria más interactiva, personalizada y accesible.  </p>
+<h1 id="nuestro-equipo">Nuestro equipo</h1>
 <ul>
-<li>Servir con Gunicorn/Uvicorn workers detrás de un proxy (IIS/ARR o Nginx) con HTTPS.</li>
-<li>Registrar logs (rotación diaria), healthchecks y monitoreo.</li>
+<li>
+<p><strong>Hernán Hereñú — Technical Lead</strong><br />
+Responsable del diseño e implementación técnica del sistema. Coordina los aspectos tecnológicos del proyecto, define la arquitectura y lidera la integración de los componentes de inteligencia artificial. Su enfoque se centra en la innovación, la eficiencia y la calidad técnica del producto.</p>
+</li>
+<li>
+<p><strong>Macarena Escuer — Project Manager</strong><br />
+Encargada de la planificación, organización y seguimiento del proyecto. Asegura la comunicación entre las distintas áreas, gestiona los plazos y coordina los recursos para garantizar el cumplimiento de los objetivos. Posee un enfoque estratégico y orientado a resultados.</p>
+</li>
+<li>
+<p><strong>Matías García — Desarrollador</strong><br />
+Participa activamente en el diseño y desarrollo de las funcionalidades del sistema. Su aporte técnico se destaca en la implementación del backend y la integración de los módulos principales. Aporta soluciones creativas y eficientes para los desafíos del desarrollo.</p>
+</li>
+<li>
+<p><strong>Jorge Retamozo — Desarrollador</strong><br />
+Colabora en la programación y mantenimiento del sistema, participando en la codificación, pruebas y documentación. Su perfil proactivo y su interés por el aprendizaje continuo aportan dinamismo y compromiso al grupo.</p>
+</li>
 </ul>
 
 
