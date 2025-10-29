@@ -26,7 +26,8 @@ theme:
 
 extra_javascript:
   - js/logo-theme-switcher.js
-
+markdown_extensions:
+  - attr_list
 
 nav:
   - Introducción: index.md
@@ -46,5 +47,6 @@ nav:
   - Copias de seguridad: backups.md
   - Migración: migracion.md
   - FAQ: faq.md
+  - Acerca de Smartech: acerca.md
 
 dev_addr: 127.0.0.1:8001
